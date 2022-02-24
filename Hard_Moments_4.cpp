@@ -47,7 +47,7 @@ auto double_to_int = [](double i) {
 };
 
 double myfunct1(double a, double b) {
-	return a*b;
+	return a+b;
 }
 double myfunct2(double a, int b) {
 	return (a * a) - (2 * a * b) + (b * b);
@@ -87,7 +87,7 @@ int main()
 	}
 	std::cout << std::endl;
 
-	std::cout << std::inner_product(a.begin(), a.end(), b.begin(), a.size() - 1, myfunct1, myfunct2) << std::endl;
+	std::cout << std::inner_product(a.begin(), a.end(), b.begin(), 0, myfunct1, myfunct2) << std::endl;
 
 	/////////
 
